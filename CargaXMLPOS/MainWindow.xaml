@@ -5,8 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CargaXMLPOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="715.196">
+    
+
+        <DockPanel>
+            
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBar.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </StatusBar.ItemsPanel>
+                <StatusBarItem>
+                    <TextBlock Name="lblCursorPosition" />
+                </StatusBarItem>
+                <Separator Grid.Column="1" />
+                <StatusBarItem Grid.Column="2">
+                    <TextBlock Text="c:\path\of\current\file.txt" />
+                </StatusBarItem>
+                <Separator Grid.Column="3" />
+                <StatusBarItem Grid.Column="4">
+                    
+                </StatusBarItem>
+            </StatusBar>
+        <GroupBox Header="Información" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Tipo Proceso:"/>
+                <Label Grid.Row="0" Grid.Column="4" Content="Intervalo:"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="XML Origen:"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="XML Error:"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="XML Backup:"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="XML Respuesta:"/>
+
+                <TextBox Grid.Column="1" Grid.Row="0" Margin="5" Name="tproceso" IsReadOnly="True" BorderThickness="0">***</TextBox>
+                <TextBox Grid.Column="5" Grid.Row="0" Margin="5" Name="tintervalo" IsReadOnly="True" BorderThickness="0">***</TextBox>
+
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Name="xmlorigen" IsReadOnly="True" BorderThickness="0">***</TextBox>
+                <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Name="xmlerror" IsReadOnly="True" BorderThickness="0">***</TextBox>
+                <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Name="xmlbackup" IsReadOnly="True" BorderThickness="0">***</TextBox>
+                <TextBox Grid.Column="1" Grid.Row="4" Margin="5" Name="xmlrespuesta" IsReadOnly="True" BorderThickness="0">***</TextBox>
+
+
+            </Grid>
+        </GroupBox>
+    </DockPanel>
+    
 </Window>
